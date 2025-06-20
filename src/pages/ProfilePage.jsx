@@ -91,7 +91,7 @@ function ProfilePage() {
                 Full Name
               </div>
               <p className="px-4 py-1.5 bg-base-200 rounded-lg border">
-                {authUser.fullName}
+                {authUser?.fullName}
               </p>
             </div>
             {/* Email */}
@@ -101,7 +101,7 @@ function ProfilePage() {
                 Email
               </div>
               <p className="px-4 py-1.5 bg-base-200 rounded-lg border">
-                {authUser.email}
+                {authUser?.email}
               </p>
             </div>
           </div>
@@ -111,7 +111,7 @@ function ProfilePage() {
             <div className="space-y-3 text-sm">
               <div className="flex items-center justify-between py-2 border-b border-zinc-400">
                 <span>Member Since</span>
-                <span>{authUser.createdAt}</span>
+                <span>{authUser.createdAt?.split("T")[0]}</span>
               </div>
               <div className="flex items-center justify-between py-2">
                 <span>Account Status</span>
